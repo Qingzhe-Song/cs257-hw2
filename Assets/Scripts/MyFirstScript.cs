@@ -4,16 +4,23 @@ using UnityEngine;
 
 public class MyFirstScript : MonoBehaviour
 {
-    public float speed;
+    [SerializeField]
+    private float speed;
     // Start is called before the first frame update
     void Start()
     {
-        
+        print("Test Start");
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        print(speed);
+    }
+
+    // Happens when the game stops
+    void OnDestroy()
+    {
+        print("Test Destroyed");
     }
 }
